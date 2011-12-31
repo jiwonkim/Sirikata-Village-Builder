@@ -1,6 +1,13 @@
 2011 Summer CURIS Sirikata Research Project
 
-How to configure VillageBuilder in Sirikata
+Research poster:
+    poster.pdf
+
+Demo videos:
+    http://goo.gl/5G0B3 for a demo that starts from the beginning
+    http://goo.gl/4HB5N for a tour of a finished village
+
+How to configure VillageBuilder in Sirikata:
     Under ogre/scripting:
       villageBuilderHTML.js
       villageBuilder.js
