@@ -1,0 +1,25 @@
+2011 Summer CURIS Sirikata Research Project
+
+How to configure VillageBuilder in Sirikata
+    Under ogre/scripting:
+      villageBuilderHTML.js
+      villageBuilder.js
+
+    Under std/graphics:
+      villageBulider.em
+
+    In std/graphics/default.em, add the following code in appropriate places:
+      system.require('std/graphics/villageBuilder.em;);
+      ...
+      this._loadkingUIs++;
+      this._villageBuilder = new std.graphics.VillageBuilder(this._simulator, ui_finish_cb);
+      ...
+      this._loadingUIs++;
+      this._villageBuilder.onReset(ui_finish_cb);
+      ...
+      this._binding.addAction('toggleVillageBuilder',std.core.bind(this._villageBuilder.toggle, this._villageBuilder));
+      ...
+      {key: ['button-pressed'],'m','ctrl'], action: 'toggleVillageBuilder'},
+
+    Under js/scripts/test:
+      All remaining .em files
